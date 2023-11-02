@@ -46,7 +46,19 @@
     <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Essentials Devices Common, Version=1.10.2.32045, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PepperDashEssentials\lib\net35\Essentials Devices Common.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="PepperDash_Core, Version=1.1.1.32703, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PepperDashEssentials\lib\net35\PepperDash_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PepperDash_Essentials_Core, Version=1.10.2.32041, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PepperDashEssentials\lib\net35\PepperDash_Essentials_Core.dll</HintPath>
+    </Reference>
     <Reference Include="SimplSharpCustomAttributesInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpCustomAttributesInterface.dll</HintPath>
@@ -57,18 +69,48 @@
       <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpHelperInterface.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="SimplSharpNewtonsoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpNewtonsoft.dll</HintPath>
+    </Reference>
     <Reference Include="SimplSharpPro, Version=1.5.3.17, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpPro.exe</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="SimplSharpReflectionInterface, Version=1.0.5583.25238, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpReflectionInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpTimerEventInterface, Version=1.0.6197.20052, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpTimerEventInterface.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Config\EssentialsDualDisplayRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsHuddleRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsHuddleVtc1PropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsNDisplayRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsPresentationPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsRoomConfig.cs" />
+    <Compile Include="Config\EssentialsRoomEmergencyConfig.cs" />
+    <Compile Include="Config\EssentialsTechRoomConfig.cs" />
+    <Compile Include="EsentialsRoomEmergencyContactClosure.cs" />
+    <Compile Include="EssentialsCombinedHuddleVtc1Room.cs" />
+    <Compile Include="EssentialsDualDisplayRoom.cs" />
+    <Compile Include="EssentialsHuddleSpaceRoom.cs" />
+    <Compile Include="EssentialsHuddleVtc1Room.cs" />
+    <Compile Include="EssentialsNDisplayRoomBase.cs" />
+    <Compile Include="EssentialsTechRoom.cs" />
+    <Compile Include="EssentialsVolumeLevelConfig.cs" />
+    <Compile Include="IEssentialsHuddleSpaceRoom.cs" />
+    <Compile Include="IEssentialsHuddleVtc1Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Config\SimplRoomPropertiesConfig.cs" />
     <None Include="Properties\ControlSystem.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
