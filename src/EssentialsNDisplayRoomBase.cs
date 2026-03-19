@@ -11,12 +11,20 @@ namespace PDT.Plugins.Essentials.Rooms
     {
         //public event SourceInfoChangeHandler CurrentSingleSourceChange;
 
+#if ESSENTIALS_V2
         public Dictionary<eSourceListItemDestinationTypes, IRoutingSink> Displays { get; protected set;}
+#else
+        public Dictionary<eSourceListItemDestinationTypes, IRoutingSinkWithSwitching> Displays { get; protected set;}
+#endif
 
         public EssentialsNDisplayRoomBase(DeviceConfig config)
             : base (config)
         {
+#if ESSENTIALS_V2
             Displays = new Dictionary<eSourceListItemDestinationTypes, IRoutingSink>();
+#else
+            Displays = new Dictionary<eSourceListItemDestinationTypes, IRoutingSinkWithSwitching>();
+#endif
 
         }
     }

@@ -14,9 +14,13 @@ using PepperDash.Essentials.Core.Config;
 using PepperDash.Essentials.Core.DeviceTypeInterfaces;
 using PepperDash.Essentials.Core.Presets;
 using PepperDash.Essentials.Devices.Common;
+#if ESSENTIALS_V2
 using PepperDash.Essentials.Devices.Common.Displays;
+#endif
 using PepperDash.Essentials.Room.Config;
+#if ESSENTIALS_V2
 using EssentialsTechRoomConfig = PDT.Plugins.Essentials.Rooms.Config.EssentialsTechRoomConfig;
+#endif
 
 namespace PDT.Plugins.Essentials.Rooms
 {
@@ -510,10 +514,12 @@ Params: {2}"
             RunDirectRoute(source, dest);
         }
 
+#if ESSENTIALS_V2
         public void RunDirectRoute(string sourceKey, string destinationKey, eRoutingSignalType sigType)
         {
             RunDirectRoute(sourceKey, destinationKey);
         }
+#endif
 
         #endregion
     }

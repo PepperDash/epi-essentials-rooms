@@ -6,6 +6,7 @@ using PepperDash.Essentials.Core.Config;
 
 namespace PDT.Plugins.Essentials.Rooms
 {
+#if ESSENTIALS_V2
     /// <summary>
     /// Registers all room types from this plugin with the Essentials v2 DeviceFactory.
     /// Discovered and called automatically by DeviceFactory via reflection on startup.
@@ -43,4 +44,21 @@ namespace PDT.Plugins.Essentials.Rooms
             }
         }
     }
+#else
+    /// <summary>
+    /// Registers all room types from this plugin with the Essentials v1 DeviceFactory.
+    /// Discovered and called automatically by DeviceFactory via reflection on startup.
+    /// </summary>
+    public class EssentialsRoomsDeviceFactory : IDeviceFactory
+    {
+        public void LoadTypeFactories()
+        {
+            DeviceFactory.AddFactoryForType("huddle",               dc => new EssentialsHuddleSpaceRoom(dc));
+            DeviceFactory.AddFactoryForType("huddlevtc1",           dc => new EssentialsHuddleVtc1Room(dc));
+            DeviceFactory.AddFactoryForType("dualdisplay",          dc => new EssentialsDualDisplayRoom(dc));
+            DeviceFactory.AddFactoryForType("combinedhuddlevtc1",   dc => new EssentialsCombinedHuddleVtc1Room(dc));
+            DeviceFactory.AddFactoryForType("techroom",             dc => new EssentialsTechRoom(dc));
+        }
+    }
+#endif
 }
