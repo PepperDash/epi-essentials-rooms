@@ -6,6 +6,7 @@ using PDT.Plugins.Essentials.Rooms.Config;
 using PepperDash.Core;
 using PepperDash.Essentials.Core;
 using PepperDash.Essentials.Core.Config;
+using PepperDash.Essentials.Devices.Common.Displays;
 
 namespace PDT.Plugins.Essentials.Rooms
 {
@@ -66,7 +67,7 @@ namespace PDT.Plugins.Essentials.Rooms
 
 		public EssentialsHuddleRoomPropertiesConfig PropertiesConfig { get; private set; }
 
-		public IRoutingSinkWithSwitching DefaultDisplay { get; private set; }
+		public IRoutingSink DefaultDisplay { get; private set; }
 		public IRoutingSink DefaultAudioDevice { get; private set; }
 		public IBasicVolumeControls DefaultVolumeControls { get; private set; }
 

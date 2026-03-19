@@ -6,6 +6,7 @@ using PDT.Plugins.Essentials.Rooms.Config;
 using PepperDash.Core;
 using PepperDash.Essentials.Core;
 using PepperDash.Essentials.Core.Config;
+using PepperDash.Essentials.Devices.Common.Displays;
 using PepperDash.Essentials.Core.DeviceTypeInterfaces;
 using PepperDash.Essentials.Devices.Common.AudioCodec;
 using PepperDash.Essentials.Devices.Common.Codec;
@@ -101,7 +102,7 @@ namespace PDT.Plugins.Essentials.Rooms
 
         public EssentialsHuddleVtc1PropertiesConfig PropertiesConfig { get; private set; }
 
-		public IRoutingSinkWithSwitching DefaultDisplay { get; private set; }
+		public IRoutingSink DefaultDisplay { get; private set; }
 		public IBasicVolumeControls DefaultAudioDevice { get; private set; }
 		public IBasicVolumeControls DefaultVolumeControls { get; private set; }
 
