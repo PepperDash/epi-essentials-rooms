@@ -1,0 +1,7 @@
+# Ignore all DLLs in this folder except the four referenced by the project
+*
+!.gitignore
+!PepperDashCore.dll
+!PepperDash_Essentials_Core.dll
+!Essentials Devices Common.dll
+!Serilog.dll

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8117008C-73D0-43DE-AD77-11CB552294DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDT.Plugins.Essentials.Rooms._4._72</RootNamespace>
+    <AssemblyName>PDT.Plugins.Essentials.Rooms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ESSENTIALS_V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ESSENTIALS_V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Crestron SDK via NuGet (Crestron.SimplSharp.SDK.Library) -->
+    <Reference Include="SimplSharpCustomAttributesInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\lib\net47\SimplSharpCustomAttributesInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpHelperInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\lib\net47\SimplSharpHelperInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpNewtonsoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\lib\net47\SimplSharpNewtonsoft.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpReflectionInterface, Version=1.0.5583.25238, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\lib\net47\SimplSharpReflectionInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpTimerEventInterface, Version=1.0.6197.20052, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\lib\net47\SimplSharpTimerEventInterface.dll</HintPath>
+    </Reference>
+    <!-- Crestron base runtime (installed by Crestron Toolbox) -->
+    <Reference Include="SimplSharpPro">
+      <HintPath>$(ProgramData)\Crestron\SDK\SimplSharpPro.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- PepperDash assemblies extracted from PepperDashEssentials.2.28.0.net472.cpz -->
+    <Reference Include="PepperDashCore">
+      <HintPath>..\lib\PepperDashCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PepperDash_Essentials_Core">
+      <HintPath>..\lib\PepperDash_Essentials_Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Essentials Devices Common">
+      <HintPath>..\lib\Essentials Devices Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\lib\Serilog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- Standard .NET references -->
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\EssentialsDualDisplayRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsHuddleRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsHuddleVtc1PropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsNDisplayRoomPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsPresentationPropertiesConfig.cs" />
+    <Compile Include="Config\EssentialsRoomConfig.cs" />
+    <Compile Include="Config\EssentialsRoomEmergencyConfig.cs" />
+    <Compile Include="Config\EssentialsTechRoomConfig.cs" />
+    <Compile Include="Config\SimplRoomPropertiesConfig.cs" />
+    <Compile Include="EsentialsRoomEmergencyContactClosure.cs" />
+    <Compile Include="EssentialsCombinedHuddleVtc1Room.cs" />
+    <Compile Include="EssentialsDualDisplayRoom.cs" />
+    <Compile Include="EssentialsHuddleSpaceRoom.cs" />
+    <Compile Include="EssentialsHuddleVtc1Room.cs" />
+    <Compile Include="EssentialsNDisplayRoomBase.cs" />
+    <Compile Include="EssentialsTechRoom.cs" />
+    <Compile Include="EssentialsVolumeLevelConfig.cs" />
+    <Compile Include="IEssentialsHuddleSpaceRoom.cs" />
+    <Compile Include="IEssentialsHuddleVtc1Room.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EssentialsRoomsDeviceFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\build\Crestron.SimplSharp.SDK.Library.targets" Condition="Exists('..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\build\Crestron.SimplSharp.SDK.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\build\Crestron.SimplSharp.SDK.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Crestron.SimplSharp.SDK.Library.2.21.226\build\Crestron.SimplSharp.SDK.Library.targets'))" />
+  </Target>
+</Project>
